@@ -1,9 +1,10 @@
 import React from 'react';
+import Nav from './Nav/Nav';
 
 function App() {
   return (
     <main className='App'>
-      {/* content goes here */}
+      <Nav />
     </main>
   );
 }
