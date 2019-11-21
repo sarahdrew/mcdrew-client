@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Route } from "react-router-dom";
 import Nav from './Nav/Nav';
+import Home from './Home/Home';
+import About from './About/About';
+import Register from './Register/Register';
 
-function App() {
-  return (
-    <main className='App'>
-      <Nav />
-    </main>
-  );
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      players: [],
+      matches: []
+    }
+
+    return (
+
+      <div className='App' >
+        <nav>
+          <Nav />
+        </nav>
+        <main className='App'>
+
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/register' component={Register} />
+
+        </main>
+      </div>
+
+    );
+
+  }
 }
-
-export default App;
