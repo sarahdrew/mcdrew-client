@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import Nav from './Nav/Nav';
+import Counter from './Counter/Counter';
 import Home from './Home/Home';
 import About from './About/About';
 import Register from './Register/Register';
@@ -18,6 +19,7 @@ export default class App extends Component {
       <div className='App' >
         <nav>
           <Nav />
+          <Counter />
         </nav>
         <main className='App'>
 
